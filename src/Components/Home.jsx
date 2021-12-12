@@ -27,14 +27,15 @@ const getMovies = async () => {
 };
 
 useEffect(() => {
-  
- getMovies()
+   getMovies()
 }, [])
+
+
     return (
       <Container>
         <Row>
           <Col md={12} style={{ marginBottom: "20px" }}>
-            <MovieSection />
+            <MovieSection movies={movies}/>
           </Col>
           <Col md={12} style={{ marginBottom: "20px" }}>
             <MovieSection />
