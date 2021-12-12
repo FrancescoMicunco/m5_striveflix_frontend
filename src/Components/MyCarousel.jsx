@@ -1,7 +1,10 @@
-import { Container, Row, Card, Button, Carousel } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
+import SingleMovie from "./SingleMovie"
 
 
 const MyCarousel = () => {
+
+
   return (
   <Carousel
     id="trendingNowControls"
@@ -21,40 +24,10 @@ const MyCarousel = () => {
           className="row no-gutters row-cols-12 row-cols-sm-6 row-cols-md-3 row-cols-lg-3"
           style={{ wrap: "nowrap" }}
         >
-          <div className="col p-1">
-            <img
-              src="assets/media/media1.webp"
-              alt=""
-              className="img-fluid rounded movie-cover"
-            />
-          </div>
-          <div className="col p-1">
-            <img
-              src="assets/media/media2.webp"
-              alt=""
-              className="img-fluid rounded movie-cover"
-            />
-          </div>
-          <div className="col p-1">
-            <img
-              src="assets/media/media3.webp"
-              alt=""
-              className="img-fluid rounded movie-cover"
-            />
-          </div>
-          <div className="col p-1">
-            <img
-              src="assets/media/media4.webp"
-              alt=""
-              className="img-fluid rounded movie-cover"
-            />
-          </div>
-          {/* <div class="col p-1"><img src="assets/media/media5.webp" alt="" class="img-fluid rounded movie-cover"/></div>
-                        <div class="col p-1"><img src="assets/media/media6.webp" alt="" class="img-fluid rounded movie-cover"/></div> */}
-        </div>
+          <SingleMovie />
       </div>
     </div>
-
+</div>
     <a
       class="carousel-control-prev"
       href="#trendingNowControls"

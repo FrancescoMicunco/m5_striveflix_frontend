@@ -1,15 +1,22 @@
-// 1 create a movie array
+import { useState, useEffect } from "react"
+
+
+
 let movies = []
-const url = "https://striveschool-api.herokuapp.com/api/movies";
-const headers = new Headers({
-    "Authorization": "process.env.BEARER_KEY",
+const url = "http://localhost:3001";
+const headersPost = new Headers({
+
     'Content-Type': 'application/JSON'
 })
 
-// 2 fetching data globally
-const moviesFromServer = async() => {
+
+const getMovies = async() => {
+
     try {
-        const res = await fetch(url, {})
+        const res = await fetch(url, {
+            method: "POST",
+            headersPost
+        })
         if (res.ok) {
             const data = await res.json()
             movies = await data
@@ -20,4 +27,4 @@ const moviesFromServer = async() => {
     } catch (error) { console.log(error) }
 }
 
-moviesFromServer()
+export default Movies
