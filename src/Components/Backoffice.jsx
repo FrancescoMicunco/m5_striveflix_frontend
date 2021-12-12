@@ -2,27 +2,27 @@ import { Container, Row, Col } from "react-bootstrap";
 //import { useState, useEffect } from "react";
 
 const Backoffice = () => {
-let movies = [];
-const url = "http://localhost:3001";
-const headersPost = new Headers({
-  "Content-Type": "application/JSON",
-});
+// let movies = [];
+// const url = "http://localhost:3001";
+// const headersPost = new Headers({
+//   "Content-Type": "application/JSON",
+// });
 
-const getMovies = async () => {
-  try {
-    const res = await fetch(url, {
-      method: "POST",
-      headersPost,
-    });
-    if (res.ok) {
+// const getMovies = async () => {
+//   try {
+//     const res = await fetch(url, {
+//       method: "POST",
+//       headersPost,
+//     });
+//     if (res.ok) {
       
-    } else {
-      throw new Error(alert("bad request error!"));
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
+//     } else {
+//       throw new Error(alert("bad request error!"));
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
   return(
   <Container>

@@ -1,15 +1,15 @@
 import { Container, Row, Col} from 'react-bootstrap'
 import MovieSection from './ListMovieSection';
-import { Component, useState, useEffect } from "react";
+import { useEffect } from "react";
 
 
 const Home = () => {
 
 let movies = [];
 const url = "http://localhost:3001/media";
-const headersPost = new Headers({
-  "Content-Type": "application/JSON",
-});
+// const headersPost = new Headers({
+//   "Content-Type": "application/JSON",
+// });
 
 const getMovies = async () => {
   try {
@@ -27,7 +27,8 @@ const getMovies = async () => {
 };
 
 useEffect(() => {
-   getMovies()
+  getMovies();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [])
 
 
